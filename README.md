@@ -59,6 +59,7 @@ Streamlit web app (simple browser interface)
 - **Version Control**: [Git](https://git-scm.com/) + [GitHub](https://github.com/)  
   For source control and collaboration.
 
-- **Optional AI Integration**: [OpenAI API](https://platform.openai.com/)  
+- **AI Integration**: [OpenAI API](https://platform.openai.com/)  
   For enhanced scam-risk classification (🟢 Low, 🟠 Caution, 🔴 High).
+
 
