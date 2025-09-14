@@ -1,0 +1,122 @@
+/* Base page style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 2rem;
+}
+
+/* Heading style */
+h1 {
+  text-align: center;
+  color: #c00;
+  margin-bottom: 1.25rem;
+}
+
+/* Text box style (index page) */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Button style (index page) */
+button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #c00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: #900; }
+
+/* Result boxes (index page) */
+.result.safe {
+  background: #e6ffed;
+  border: 2px solid #2ecc71;
+  color: #2ecc71;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+.result.scam {
+  background: #ffe6e6;
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* -----------------------------
+   Recent Checks table (history)
+   ----------------------------- */
+
+/* Keep column widths stable and full width */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;           /* No jitter: widths decided once */
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;              /* rounds the corners */
+}
+
+/* Sticky header for long lists */
+thead th {
+  position: sticky;
+  top: 0;
+  background: #f1f3f5;
+  z-index: 1;
+}
+
+/* Cell basics */
+th, td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: anywhere;       /* wrap long words/URLs */
+  word-break: break-word;
+}
+
+/* Header style */
+th {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Zebra rows */
+tbody tr:nth-child(odd) { background: #fafbfc; }
+
+/* Hover highlight */
+tbody tr:hover { background: #f5f7f9; }
+
+/* Verdict emphasis */
+td:nth-child(3) { font-weight: 600; }
+
+/* Keep message formatting but allow wrapping */
+pre {
+  white-space: pre-wrap;         /* keep newlines, wrap long lines */
+  margin: 0;
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* Clamp tall messages so a single row doesn't balloon the table */
+.message-cell pre {
+  max-height: 240px;             /* tweak to taste */
+  overflow: auto;                 /* scroll inside the cell if long */
+  padding-right: 4px;             /* space for scrollbar */
+}
+
+/* Link back styling */
+a { color: #c00; text-decoration: none; }
+a:hover { text-decoration: underline; }

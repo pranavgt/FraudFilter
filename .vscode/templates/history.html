@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fraud Filter — History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Recent Checks</h1>
+  <table>
+    <colgroup>
+      <col style="width:20%">
+      <col style="width:12%">
+      <col style="width:18%">
+      <col style="width:50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>When (UTC)</th>
+        <th>Source</th>
+        <th>Verdict</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for created_at, source, verdict, message in rows %}
+        <tr>
+          <td>{{ created_at }}</td>
+          <td>{{ source }}</td>
+          <td>{{ verdict }}</td>
+          <td class="message-cell"><pre>{{ message }}</pre></td>
+        </tr>
+      {% else %}
+        <tr><td colspan="4">No checks yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="/">← Back</a></p>
+</body>
+</html>
