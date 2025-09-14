@@ -35,3 +35,30 @@ Two ways to run:
 Command line app (paste text → get a score)
 
 Streamlit web app (simple browser interface)
+
+## 🛠 Tech Stack
+
+- **Backend Framework**: [Flask](https://flask.palletsprojects.com/)  
+  Lightweight Python web framework for routing and server logic.
+
+- **OCR**: [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) via [pytesseract](https://pypi.org/project/pytesseract/)  
+  Extracts text from uploaded images/screenshots.
+
+- **Image Processing**: [Pillow (PIL)](https://python-pillow.org/)  
+  Handles image formats and preprocessing before OCR.
+
+- **Database**: [SQLite](https://www.sqlite.org/)  
+  File-based database for storing message checks and verdicts.
+
+- **Templating**: [Jinja2](https://jinja.palletsprojects.com/)  
+  Used by Flask to render dynamic HTML templates (`index.html`, `history.html`).
+
+- **Styling**: Custom **CSS**  
+  Lightweight red-accent UI for forms, verdicts, and history tables.
+
+- **Version Control**: [Git](https://git-scm.com/) + [GitHub](https://github.com/)  
+  For source control and collaboration.
+
+- **Optional AI Integration**: [OpenAI API](https://platform.openai.com/)  
+  For enhanced scam-risk classification (🟢 Low, 🟠 Caution, 🔴 High).
+
