@@ -2,7 +2,7 @@
 
 A simple scam-detection tool to help protect people (especially seniors) from online fraud, phishing, and scam messages.
 
-📖 Overview
+## 📖 Overview
 
 Our project is a scam detection tool for seniors. Users can either paste text or upload a screenshot of a message. The app extracts text with OCR, checks it against scam keywords like “urgent” or “wire transfer,” and shows a verdict. It also stores a history of all checks so family members can review past messages and spot scam patterns.
 
@@ -61,5 +61,6 @@ Streamlit web app (simple browser interface)
 
 - **AI Integration**: [OpenAI API](https://platform.openai.com/)  
   For enhanced scam-risk classification (🟢 Low, 🟠 Caution, 🔴 High).
+
 
 
